@@ -1,0 +1,447 @@
+/*Quelle für unsere Foundation http://jaydenseric.com/blog/forget-normalize-or-resets-lay-your-own-css-foundation*/
+
+/*Sorgt dafür, dass auf dem Handy nicht automatisch gezoomt wird*/
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/*Entfernen des Außenabstandes des Bodys, Wahl der Textgröße, Zeilenhöhe, Schriftart und Standardschriftart*/
+html {
+    margin: 0;
+    font: 16px/1.1 Arial, Sans-Serif;
+    box-sizing: border-box;
+}
+
+/*Entfernen der Innen- und Außenabstände*/
+h1, h2, h3, h4, p, figure, ol, ul, hr {
+    margin: 0;
+    padding: 0;
+}
+
+/*Macht aus dem li Inline Element ein Block Element was dafür sorgt dass z.b. die Punkte verschwinden (evtl später main einbeziehen)*/
+li {
+    display: block;
+}
+
+/*Links sind standardmäßig nicht unterstrichen*/
+a {
+    text-decoration: none;
+}
+
+/*Sorgt für eine Mozilla Firefox bug behebung*/
+/*::-moz-focus-inner
+{
+    padding: 0;
+    border: 0;
+}*/
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+/*--------------------------------------------Eigenes CSS*/
+body {
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*sorgt dafür dass unsere nav hintereinander steht und umrandet ist*/
+body > section:first-child {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    height: auto;       /*sorgt dafür, dass die section genauso groß ist wie der Inhalt*/
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 1%;
+}
+
+body > section:nth-child(2){
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+
+    justify-content: center;
+    align-items: center;
+    
+    width: auto;
+    margin: 15% 0 0 0 ;
+}
+
+h1 a{
+    color:white;
+}
+
+h1 span:first-child {
+    color: rgb(20,54,90);
+}
+
+h1 > span:nth-child(2) { /*muss 2 sein, da das erste child das <a> von Hunger ist*/
+    color: rgb(20,54,90);
+}
+
+h1 > span {
+    color:  rgba(45, 89, 38, 1);
+}
+
+h1 span:last-child {
+    color: rgb(94,16,34);
+}
+
+nav li {
+    display: inline-block;
+    border: 2px white solid;
+    padding: 0.5%;
+    margin: 0.25%;
+}
+
+nav>ul>li>a {
+     color: rgb(255,255,255);
+}
+
+nav li:hover {
+    border: 2px black solid;
+}
+
+/*Sorgt dafür dass nav mittig ist*/
+h1 {
+    font-size: 300%;
+}
+
+h4{
+    font-size: 120%;
+}
+
+table {
+    border: 10px black solid;
+    margin:auto
+}
+
+section:first-child {
+    background: rgb(0,0,0);
+    color: rgb(255,255,255);
+}
+
+body#index {
+    background-color: rgb(0,0,0);
+    
+}
+
+body#zeichen1 {
+    background-color: rgb(20,54,90);
+    color: rgb(255,255,255);
+}
+
+body#zeichen2 {
+    background-color: rgba(45, 89, 38, 1);
+    color: rgb(255,255,255);
+}
+
+body#zeichen3 {
+    background-color: rgb(94,16,34);
+    color: rgb(255,255,255);
+}
+
+footer>li>a{
+    color:white;
+}
+
+footer{
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    padding: 1%;
+    background: rgb(0,0,0);
+}
+
+img{
+    margin:2%;
+}
+
+/************* Zeichen eins *************/
+
+#zeichen1 time{
+    font-size: 70%;
+    text-align: left;
+    width: 100%;
+    display: block;
+    margin: 1%;
+}
+
+#zeichen1 img{
+    margin: 2%;
+}
+
+#zeichen1 h4{
+    margin: 2%;
+}
+
+#zeichen1 div{
+    display: inline;  
+}
+
+img[alt="Burgermeister"] {
+    width: 50%;
+}
+
+img[alt="Mustafa"] {
+    width: 50%;
+}
+
+@media screen 
+	and (max-width: 480px){
+    #zeichen1 img[alt="Travolta"] {display: none}
+}
+
+@media screen 
+	and (min-width: 620px)
+	and (max-width: 780px){
+    #zeichen1 img[alt="Travolta"] {display: none}
+}
+    
+/*********** Zeichen zwei *************/
+#zeichen2 {
+    display: flex;
+}
+
+#zeichen2 main a {
+    color: inherit;
+    font-style: oblique;
+}
+
+#zeichen2 a:hover {
+    text-decoration: underline;
+}
+
+#zeichen2 section {
+    display: flex;
+    flex: 1;
+}
+
+#zeichen2 main {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-around;
+}
+
+/****** aside ******/
+#zeichen2 main > div:first-child {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 1%;
+    margin: 0 0 0 1%;
+    
+    background: rgba(255,255,255,0.3);
+}
+
+#zeichen2 main > div:first-child img[alt="instagramIcon"]{
+    width: 20%;
+}
+
+/****** Hauptteil ******/
+#zeichen2 main #articles>article {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    
+    padding: 1%;
+    margin: 0% 1% 2% 1%;
+    
+   
+    background: rgba(255,255,255,0.3);
+}
+
+#zeichen2 main #articles>article p{
+    margin: 0 10%;
+}
+
+#zeichen2 main #articles>article ul {
+    text-align:left;
+    display: block;
+    list-style-type: disc;
+    margin 1em;
+    padding: 2% 20%;
+}
+
+#zeichen2 main #articles>article ul li {
+    display: list-item;
+}
+
+#zeichen2 main #articles>article img {
+    width: 30%;
+}
+
+#zeichen2 main #articles>article>figcaption {
+    position: absolute;
+    bottom: 0;
+    
+    color: red;
+}
+
+#zeichen2 time {
+    font-size: 70%;
+    text-align: left;
+}
+
+#zeichen2 main #articles>article a img[alt="facebookIcon"] {
+    width: 5%;
+}
+
+/************* Zeichen drei *************/
+
+
+
+#zeichen3 main #artikel>article p{
+    margin: 0 10%;
+}
+
+#zeichen3 {
+    display: block;
+}
+
+#zeichen3 main #artikel article img{
+    margin: 2%;
+    height: 40%;
+    width: 40%;
+    
+}
+
+#zeichen3 main #artikel>article a img[alt="facebookIcon"] {
+    width: 5%;
+}
+
+#zeichen3 article > h4  {
+    margin: 2%;
+}
+
+#zeichen3 article time {
+    text-align: left;
+    font-size: 80%;
+}
+
+#zeichen3 a {
+    color: inherit;
+    
+}
+
+#zeichen3 a:hover {
+    text-decoration: underline;
+}
+
+#zeichen3 section {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+#zeichen3 main {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-around;
+}
+
+#zeichen3 main #artikel article {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    
+    padding: 1%;
+    margin: 0% 1% 2% 1%;
+    
+    background: rgba(255,255,255,0.3);
+    
+}
+
+#zeichen3 main > div:first-child {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 1%;
+    margin: 0 0 0 1%;
+    
+    background: rgba(255,255,255,0.3);
+}
+
+
+/************* Transition *************/
+
+
+ #zeichen3 img[alt="Tommy"]{
+    transform: scale(1);
+    transition: all 1.3s ease; 
+}
+
+
+#zeichen3 img[alt="Tommy"]:hover{
+	transform: scale(2.5) translateX(30%);
+    transition-delay: 0.3s;
+
+}
+
+/************ Mobile Version mit Media Queries ****************/
+
+@media screen 
+	and (max-width: 480px){
+    #zeichen3 main {
+    display: block;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-around;
+    }
+    
+    #zeichen3 img[alt="Zeichen drei"]{display: none;}
+}
+
+@media screen 
+	and (min-width: 620px)
+	and (max-width: 780px){
+    #zeichen3 main {
+    display: block;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-around;
+    }
+}
+
+/** Javascript**/
+/** Tic-Tac-Toe **/
+
+#jsbody
+{
+    background: grey;
+    
+}
+
+#jsbody h3
+{
+    font-size: 5em;
+}
+
+#jsbody td
+{
+    width: 200px;
+    height: 200px;
+    font-size: 100px;
+    border: 6px black solid;
+}
+
+#jsbody table
+{
+    margin-bottom: 2%;
+}
+
+#jsbody div
+{
+    margin-bottom: 2%;
+    font-size: 2em;
+    color: black;
+}

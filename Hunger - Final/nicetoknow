@@ -1,0 +1,9 @@
+Not noramlize.css, not reset.css - do it yourself!
+http://jaydenseric.com/blog/forget-normalize-or-resets-lay-your-own-css-foundation
+
+smoothing Blogbeitrag:
+http://www.usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/
+
+Abkürzungen, welche Reihenfolge:
+font: [[<'font-style'> || <'font-variant'> || <'font-weight'>] ? <'font-size'>[/<'line-height'>] ? <'font-family'>]
+
